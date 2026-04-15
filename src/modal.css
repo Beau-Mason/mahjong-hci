@@ -1,0 +1,95 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2147483647;
+  font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+
+.dialog {
+  background: #fff;
+  color: #222;
+  border-radius: 12px;
+  padding: 24px;
+  width: min(560px, 92vw);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.dialog h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.subtitle {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: #555;
+}
+
+.media {
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media video,
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feedback {
+  margin: 16px 0 0;
+  padding: 12px 14px;
+  background: #fff6e5;
+  border-left: 4px solid #f0a500;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.actions button {
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.actions .capture,
+.actions .save {
+  background: #2d7ef7;
+  border-color: #2d7ef7;
+  color: #fff;
+}
+
+.actions button:hover {
+  filter: brightness(0.95);
+}
+
+.actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  margin: 12px 0 0;
+  color: #c62828;
+  font-size: 13px;
+}
