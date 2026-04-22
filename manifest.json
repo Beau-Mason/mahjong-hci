@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Mahjong Soul Reflection (研究用プロトタイプ)",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "対局終了後に自身の表情を撮影し、内省を促すフィードバックを表示する研究用拡張機能。",
   "permissions": ["storage"],
   "host_permissions": ["https://game.mahjongsoul.com/*"],
@@ -14,7 +14,7 @@
     },
     {
       "matches": ["https://game.mahjongsoul.com/*"],
-      "js": ["src/content.js"],
+      "js": ["vendor/face-api.min.js", "src/content.js"],
       "css": ["src/modal.css"],
       "run_at": "document_start",
       "world": "ISOLATED"
@@ -22,7 +22,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["src/modal.css"],
+      "resources": ["src/modal.css", "models/*"],
       "matches": ["https://game.mahjongsoul.com/*"]
     }
   ]
